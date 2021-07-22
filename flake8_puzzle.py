@@ -18,6 +18,7 @@ class Visitor(ast.NodeVisitor):
                 isinstance(node, ast.Call) and
                 node.args and
                 not node.keywords and
+                len(node.args) == 1 and
                 isinstance(node.args[0], ast.Constant) and
                 isinstance(node.args[0].value, str)
         ):

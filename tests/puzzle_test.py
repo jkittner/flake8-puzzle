@@ -21,6 +21,7 @@ def results(s):
         'my_function("something {}".format(var))',
         'my_function(f"foo")',
         'my_function("foo", kwarg="bar")',
+        'my_function("foo", "bar")',
     ),
 )
 def test_invalid(s):
